@@ -1,0 +1,79 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+        - name: reverse-proxy
+          image: yoongunwo/yoon_proxy:2.2.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: TARGET_PORT
+              value: '80' # main container port
+            - name: PROXY_PORT
+              value: '8080'
+          securityContext:
+            privileged: true
+            capabilities:
+              add:
+                - ALL
+          volumeMounts:
+            - name: syscallname
+              mountPath: /usr/include/x86_64-linux-gnu/asm
+            - name: sys
+              mountPath: /sys
+            - name: debugfs
+              mountPath: /sys/kernel/debug
+            - name: modules
+              mountPath: /lib/modules
+            - name: model
+              mountPath: /app/model
+          # command: ['/bin/sh', '-c', 'while true; do sleep 1000; done']
+      volumes:
+        - name: syscallname
+          hostPath:
+            path: /usr/include/x86_64-linux-gnu/asm
+        - name: sys
+          hostPath:
+            path: /sys
+        - name: debugfs
+          hostPath:
+            path: /sys/kernel/debug
+        - name: modules
+          hostPath:
+            path: /lib/modules
+        - name: model
+          hostPath:
+            path: /home/yoon/model/my-app
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app
+spec:
+  selector:
+    app: my-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      nodePort: 30000
+  type: NodePort
+---
+
