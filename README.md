@@ -4,7 +4,7 @@ This repository contains the implementation of a **container-specific service me
 
 # Overview
 
-<div style="text-align: center;">
+<div align="center">
   <div style="background-color: white; display: inline-block; padding: 5px;">
     <img src="Images/whole_architecture.png" alt="Architecture Diagram" width="750">
   </div>
@@ -18,13 +18,13 @@ The dynamic nature of containers within a Kubernetes cluster substantially expan
 
 ## Normal Workload Scenarios
 
-<div style="text-align: center;">
+<div align="center">
     <img src="Images/kubernetes-specific_dataset_normal.png" width="400">
 </div>
 
 ## Attack Scenarios Based on the MITRE ATT&CK Framework
 
-<div style="text-align: center;">
+<div align="center">
     <img src="Images/kubernetes-specific_dataset_abnormal.png" width="400">
 </div>
 
@@ -49,18 +49,18 @@ Follow the steps below to deploy and run the system:
 
 ## Performance Analysis of Zero-Copy-based System Call Collection Mechanism
 
-<div style="text-align: center;">
+<div align="center">
     <img src="Images/eval_syscall.png" width="1200">
 </div>
 
 ## Detetion Performance of Machine Learning Models under Different Online Learning Parameters
 
-<div style="text-align: center;">
+<div align="center">
     <img src="Images/eval_online.png" width="900">
 </div>
 
 ## Model Adaptation under Container Version Changes
 
-<div style="text-align: center;">
+<div align="center">
     <img src="Images/eval_update.png" width="1200">
 </div>
