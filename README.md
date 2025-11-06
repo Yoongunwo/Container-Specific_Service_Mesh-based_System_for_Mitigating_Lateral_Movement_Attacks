@@ -5,9 +5,7 @@ This repository contains the implementation of a **container-specific service me
 # Overview
 
 <div align="center">
-  <div style="background-color: white; display: inline-block; padding: 5px;">
     <img src="Images/whole_architecture.png" alt="Architecture Diagram" width="750">
-  </div>
 </div>
 
 <br/>
