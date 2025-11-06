@@ -6,7 +6,7 @@ This repository contains the implementation of a **container-specific service me
 
 <div style="text-align: center;">
   <div style="background-color: white; display: inline-block; padding: 5px;">
-    <img src="images/whole_architecture.png" alt="Architecture Diagram" width="750">
+    <img src="Images/whole_architecture.png" alt="Architecture Diagram" width="750">
   </div>
 </div>
 
@@ -19,13 +19,13 @@ The dynamic nature of containers within a Kubernetes cluster substantially expan
 ## Normal Workload Scenarios
 
 <div style="text-align: center;">
-    <img src="images/kubernetes-specific_dataset_normal.png" width="400">
+    <img src="Images/kubernetes-specific_dataset_normal.png" width="400">
 </div>
 
 ## Attack Scenarios Based on the MITRE ATT&CK Framework
 
 <div style="text-align: center;">
-    <img src="images/kubernetes-specific_dataset_abnormal.png" width="400">
+    <img src="Images/kubernetes-specific_dataset_abnormal.png" width="400">
 </div>
 
 # How to Use
@@ -50,7 +50,7 @@ Follow the steps below to deploy and run the system:
 ## Performance Analysis of Zero-Copy-based System Call Collection Mechanism
 
 <div style="text-align: center;">
-    <img src="images/eval_syscall.png" width="1200">
+    <img src="Images/eval_syscall.png" width="1200">
 </div>
 
 ## Detetion Performance of Machine Learning Models under Different Online Learning Parameters
