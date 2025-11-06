@@ -56,11 +56,11 @@ Follow the steps below to deploy and run the system:
 ## Detetion Performance of Machine Learning Models under Different Online Learning Parameters
 
 <div style="text-align: center;">
-    <img src="images/eval_online.png" width="900">
+    <img src="Images/eval_online.png" width="900">
 </div>
 
 ## Model Adaptation under Container Version Changes
 
 <div style="text-align: center;">
-    <img src="images/eval_update.png" width="1200">
+    <img src="Images/eval_update.png" width="1200">
 </div>
